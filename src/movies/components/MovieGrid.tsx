@@ -10,9 +10,9 @@ interface MovieGridProps {
 export const MovieGrid = (props: MovieGridProps) => {
   const params = useParams();
 
-  if (params.page) {
-    localStorage.setItem("paramsMovies", params.page);
-  }
+  // if (params.page) {
+  //   localStorage.setItem("paramsMovies", params.page);
+  // }
 
   return (
     <div>

@@ -7,7 +7,7 @@ import {
 } from "react-icons/io5";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const menuItems = [
   {

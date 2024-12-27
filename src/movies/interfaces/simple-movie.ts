@@ -1,8 +1,4 @@
 export interface SimpleMovieResponse {
-  data: Data;
-}
-
-export interface Data {
   Page: Page;
 }
 
@@ -22,13 +18,13 @@ export interface Media {
   status: string;
   endDate: EndDate;
   season: string;
-  duration: number
+  duration: number;
   bannerImage: string;
 }
 
 export interface CoverImage {
   extraLarge: string;
-  color: string
+  color: string;
 }
 
 export interface Title {

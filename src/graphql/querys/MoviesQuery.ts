@@ -1,12 +1,12 @@
 export const moviesQuery = `
-query ($page: Int, $search: String) {
+query ($page: Int, $search: String, $isAdult: Boolean) {
   Page (page: $page) {
     pageInfo {
       currentPage
       hasNextPage
       perPage
     }
-    media (search: $search) {
+    media (search: $search, isAdult: $isAdult) {
        id
        siteUrl
        format
@@ -22,6 +22,7 @@ query ($page: Int, $search: String) {
        description
        status  
        meanScore
+       isAdult
      }
    }
 }

@@ -1,6 +1,7 @@
-import httpClient from "@/app/graphql/config";
-import { moviesQuery } from "@/app/graphql/querys/MoviesQuery";
+
 import { Header } from "@/components/header/Header";
+import httpClient from "@/graphql/config";
+import { moviesQuery } from "@/graphql/querys/MoviesQuery";
 import { MovieGrid, MoviesResponse } from "@/movies";
 import Link from "next/link";
 
@@ -13,7 +14,9 @@ const getMovies = async (
   page: number,
   title?: string
 ): Promise<MoviesResponse> => {
-  const variables = title ? { page, search: title } : { page };
+  const variables = title
+    ? { page, search: title, isAdult: false }
+    : { page, isAdult: false };
 
   const response = await httpClient.request<MoviesResponse>(
     moviesQuery,
