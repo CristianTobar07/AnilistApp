@@ -23,7 +23,7 @@ const getMovies = async (): Promise<MoviesResponse> => {
             episodes
             genres
             coverImage {
-              medium
+              extraLarge
             }
             title {
               english

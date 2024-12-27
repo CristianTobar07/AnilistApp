@@ -27,7 +27,7 @@ export const MovieCard = (movieCard: MovieCardProps) => {
         <div className="flex flex-col text-center  border-b">
           <Image
             key={id}
-            src={coverImage.medium}
+            src={coverImage.extraLarge}
             width={130}
             height={80}
             alt={title.english}
@@ -86,7 +86,7 @@ export const MovieCard = (movieCard: MovieCardProps) => {
             onClick={onToggle}
             className="px-4 py-2 hover:bg-gray-600 flex items-center cursor-pointer"
           >
-            <div className="text-red-600">
+            <div className="text-yellow-600">
               {isFavorite ? (
                 <IoHeart size={25} />
               ) : (

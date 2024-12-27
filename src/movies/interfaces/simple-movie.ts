@@ -1,4 +1,3 @@
-
 export interface SimpleMovieResponse {
   data: Data;
 }
@@ -12,24 +11,33 @@ export interface Page {
 }
 
 export interface Media {
-  id:          number;
-  siteUrl:     string;
-  format:      string;
-  episodes:    number;
-  genres:      string[];
-  coverImage:  CoverImage;
-  meanScore:   number;
-  title:       Title;
+  id: number;
+  format: string;
+  episodes: number;
+  genres: string[];
+  coverImage: CoverImage;
+  meanScore: number;
+  title: Title;
   description: string;
-  status:      string;
+  status: string;
+  endDate: EndDate;
+  season: string;
+  duration: number
+  bannerImage: string;
 }
 
 export interface CoverImage {
-  medium: string;
   extraLarge: string;
+  color: string
 }
 
 export interface Title {
   english: string;
-  native:  string;
+  native: string;
+}
+
+export interface EndDate {
+  day: number;
+  month: number;
+  year: number;
 }

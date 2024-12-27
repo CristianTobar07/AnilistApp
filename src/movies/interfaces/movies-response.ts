@@ -25,7 +25,7 @@ export interface Movie {
 }
 
 export interface CoverImage {
-  medium: string;
+  extraLarge: string;
 }
 
 export interface Title {
