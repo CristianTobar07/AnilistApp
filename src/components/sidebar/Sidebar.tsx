@@ -27,12 +27,9 @@ const menuItems = [
 export const Sidebar = () => {
   const param = useParams();
 
-  console.log({ param });
-
   useEffect(() => {
     if (param.page) {
       menuItems[0].path = `/dashboard/movies/${param.page}`;
-      console.log({ menuItems });
     }
   }, [param]);
 
