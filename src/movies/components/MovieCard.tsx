@@ -30,7 +30,7 @@ export const MovieCard = (movieCard: MovieCardProps) => {
             src={coverImage.extraLarge}
             width={130}
             height={80}
-            alt={title.english}
+            alt={title.english || title.native}
             priority={false}
             style={{
               objectFit: "cover",

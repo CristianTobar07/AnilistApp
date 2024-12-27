@@ -1,8 +1,4 @@
 export interface MoviesResponse {
-  data: Data;
-}
-
-export interface Data {
   Page: Page;
 }
 

@@ -26,7 +26,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
 /* Text large */
 
 .anilist-title-text-large {
@@ -59,4 +58,11 @@ body {
   border: 3px solid transparent;
   border-radius: 100px;
   background-color: rgba(47, 0, 132, 1);
+}
+
+/* Block buttons */
+
+.anilist_block_button {
+  pointer-events: none;
+  opacity: 0.5;
 }

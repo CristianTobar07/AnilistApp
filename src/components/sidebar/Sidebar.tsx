@@ -1,15 +1,17 @@
-import Image from "next/image";
+"use client";
+
 import {
-  IoFootball,
   IoHeartOutline,
   IoLogoReact,
   IoVideocamOutline,
 } from "react-icons/io5";
 import { SidebarMenuItem } from "./SidebarMenuItem";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const menuItems = [
   {
-    path: "/dashboard/movies",
+    path: `/dashboard/movies`,
     icon: <IoVideocamOutline size={40} />,
     title: "Movies",
     subTitle: "Generación Estática",
@@ -23,6 +25,17 @@ const menuItems = [
 ];
 
 export const Sidebar = () => {
+  const param = useParams();
+
+  console.log({ param });
+
+  useEffect(() => {
+    if (param.page) {
+      menuItems[0].path = `/dashboard/movies/${param.page}`;
+      console.log({ menuItems });
+    }
+  }, [param]);
+
   return (
     <div
       id="menu"

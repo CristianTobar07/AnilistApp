@@ -11,14 +11,14 @@ interface Props {
 }
 
 export const SidebarMenuItem = ({ path, icon, title, subTitle }: Props) => {
-  const currentPath = usePathname();
+  const currentPath = usePathname().slice(0, 17);
 
   return (
     <Link
       href={path}
       className={`
             w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150
-            ${currentPath === path ? "bg-yellow-700" : ""}
+            ${currentPath === path.slice(0, 17) ? "bg-yellow-700" : ""}
           `}
     >
       <div>
