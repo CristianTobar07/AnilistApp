@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 
 interface FormValues {
@@ -9,7 +9,6 @@ interface FormValues {
 
 export const SearchMovies = () => {
   const router = useRouter();
-  const path = usePathname();
 
   const [formValues, setformValues] = useState<FormValues>({
     movieToSearch: "",

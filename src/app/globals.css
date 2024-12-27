@@ -66,3 +66,9 @@ body {
   pointer-events: none;
   opacity: 0.5;
 }
+
+/* Icon active */
+
+.anilist_icon_active:active {
+  opacity: 0.5;
+}
