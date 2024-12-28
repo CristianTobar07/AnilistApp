@@ -3,8 +3,9 @@
 import { Provider } from "react-redux";
 import { store } from "./";
 import { useEffect } from "react";
-import { setFavoritePokemons } from "./pokemons/pokemons";
+import { setFavoriteMovie } from "./favorites/favorites";
 import { setDataUser } from "./auth/authSlice";
+import { Movie } from "@/movies";
 
 interface Props {
   children: React.ReactNode;
@@ -12,13 +13,9 @@ interface Props {
 
 export const Providers = ({ children }: Props) => {
   useEffect(() => {
-    const favorites = JSON.parse(
-      localStorage.getItem("favorite-pokemons") ?? "{}"
-    );
-    const dataUser = JSON.parse(
-      localStorage.getItem("dataUser") ?? "{}"
-    );
-    store.dispatch(setFavoritePokemons(favorites));
+    const favorites = localStorage.getItem("favorites-movies");
+    const dataUser = JSON.parse(localStorage.getItem("dataUser") ?? "{}");
+    store.dispatch(setFavoriteMovie(favorites ? JSON.parse(favorites) : []));
     store.dispatch(setDataUser(dataUser));
   }, []);
 

@@ -16,8 +16,8 @@ const initialState: AuthState = {
   dataUser: undefined,
 };
 
-const counterSlice = createSlice({
-  name: "counter",
+const authSlice = createSlice({
+  name: "auth",
   initialState,
   reducers: {
     showModalAuth(state, action: PayloadAction<boolean>) {
@@ -30,6 +30,6 @@ const counterSlice = createSlice({
   },
 });
 
-export const { showModalAuth, setDataUser } = counterSlice.actions;
+export const { showModalAuth, setDataUser } = authSlice.actions;
 
-export default counterSlice.reducer;
+export default authSlice.reducer;

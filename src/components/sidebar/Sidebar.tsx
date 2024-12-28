@@ -11,7 +11,7 @@ import { useEffect } from "react";
 
 const menuItems = [
   {
-    path: `/dashboard/movies`,
+    path: `/dashboard/movies/1`,
     icon: <IoVideocamOutline size={40} />,
     title: "Movies",
     subTitle: "Generación Estática",

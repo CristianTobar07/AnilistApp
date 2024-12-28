@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "@/store";
-import { toggleFavorite } from "@/store/pokemons/pokemons";
+import { toggleFavorite } from "@/store/favorites/favorites";
 import { Movie } from "../interfaces/movies-response";
 
 interface MovieCardProps {
@@ -14,7 +14,9 @@ interface MovieCardProps {
 export const MovieCard = (movieCard: MovieCardProps) => {
   const { id, coverImage, title, format, episodes, genres, status, meanScore } =
     movieCard.movie;
-  const isFavorite = useAppSelector((state) => !!state.pokemons.favorites[id]);
+  const isFavorite = useAppSelector(
+    (state) => !!state.favorites.movies.find((movie) => movie.id === id)
+  );
   const dispatch = useAppDispatch();
 
   const onToggle = () => {

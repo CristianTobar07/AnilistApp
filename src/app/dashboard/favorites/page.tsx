@@ -1,3 +1,4 @@
+import { HeaderMoviesFavorites } from "@/components/header/HeaderMoviesFavorites";
 import { FavoritePokemons } from "@/movies";
 
 export const metadata = {
@@ -8,9 +9,7 @@ export const metadata = {
 export default async function FavoritesPage() {
   return (
     <div className="flex flex-col">
-      <span className="text-5xl my-2">
-        Pokémons Favoritos <small className="text-blue-500">Global State</small>
-      </span>
+      <HeaderMoviesFavorites />
       <FavoritePokemons />
     </div>
   );

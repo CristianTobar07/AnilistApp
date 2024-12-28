@@ -1,30 +1,24 @@
 "use client";
 
-import { useAppSelector } from "@/store";
+import { RootState, useAppSelector } from "@/store";
 import { MovieGrid } from "./MovieGrid";
 import { IoHeartOutline } from "react-icons/io5";
 
 export const FavoritePokemons = () => {
-  const favoriteMovies = useAppSelector((state) =>
-    Object.values(state.pokemons.favorites)
-  );
+  const { movies } = useAppSelector((state: RootState) => {
+    return state.favorites;
+  });
 
   return (
-    <>
-      {favoriteMovies.length === 0 ? (
-        <NoFavorites />
-      ) : (
-        <MovieGrid movies={favoriteMovies} />
-      )}
-    </>
+    <>{movies.length === 0 ? <NoFavorites /> : <MovieGrid movies={movies} />}</>
   );
 };
 
 export const NoFavorites = () => {
   return (
-    <div className="flex flex-col h-[50vh] items-center justify-center ">
-      <IoHeartOutline size={100} className="text-red-500" />
-      <span>No hay favoritos</span>
+    <div className="flex flex-col h-[50vh] items-center justify-center text-yellow-600 ">
+      <IoHeartOutline size={100} />
+      <span className="font-normal">No hay favoritos</span>
     </div>
   );
 };

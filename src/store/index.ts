@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import authReducer from "./auth/authSlice";
-import pokemonsReducer from "./pokemons/pokemons";
+import favoritesReducer from "./favorites/favorites";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    pokemons: pokemonsReducer,
+    favorites: favoritesReducer,
   },
 });
 
