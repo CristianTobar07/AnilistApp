@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import "./styles/ModalAuth.css";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { FormLogin } from "./FormLogin";
 import { FormRegister } from "./FormRegister";
 import { showModalAuth } from "@/store/auth/authSlice";
 import { useAppDispatch } from "@/store";
+import "../styles/ModalAuth.css";
 
 export const ModalAuth = () => {
   const dispatch = useAppDispatch();

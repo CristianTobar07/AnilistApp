@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { IoChevronBackOutline } from "react-icons/io5";
 
-export default function BackButton() {
+export function BackButton() {
   const router = useRouter();
 
   const handleBack = () => {

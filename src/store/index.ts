@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 
 import authReducer from "./auth/authSlice";
 import favoritesReducer from "./favorites/favorites";
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
+import SidebarReducer from "./sidebar/sidebarSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     favorites: favoritesReducer,
+    sidebar: SidebarReducer,
   },
 });
 

@@ -1,8 +1,7 @@
-
-import { Header } from "@/components/header/Header";
+import { Header } from "@/components/header";
 import httpClient from "@/graphql/config";
 import { moviesQuery } from "@/graphql/querys/MoviesQuery";
-import { MovieGrid, MoviesResponse } from "@/movies";
+import { MovieGrid, MoviesResponse } from "@/components/movies";
 import Link from "next/link";
 
 export const metadata = {
@@ -12,11 +11,19 @@ export const metadata = {
 
 const getMovies = async (
   page: number,
-  title?: string
+  title?: string,
+  category?: string
 ): Promise<MoviesResponse> => {
-  const variables = title
-    ? { page, search: title, isAdult: false }
-    : { page, isAdult: false };
+  const variables =
+    title && category
+      ? { page, search: title, genre: category, isAdult: false }
+      : title
+      ? { page, search: title, isAdult: false }
+      : category
+      ? { page, genre: category, isAdult: false }
+      : { page, isAdult: false };
+
+  console.log({ variables });
 
   const response = await httpClient.request<MoviesResponse>(
     moviesQuery,
@@ -30,12 +37,15 @@ export default async function MoviesPage({
   searchParams,
 }: {
   params: { page: string };
-  searchParams: { title?: string };
+  searchParams: { title?: string; category?: string };
 }) {
   const page = parseInt(params.page) || 1;
   const titleMovie = searchParams.title || "";
+  const categoryMovie = searchParams.category || "";
 
-  const responseMovies = await getMovies(page, titleMovie);
+  console.log({ categoryMovie });
+
+  const responseMovies = await getMovies(page, titleMovie, categoryMovie);
 
   return (
     <div className="flex flex-col">

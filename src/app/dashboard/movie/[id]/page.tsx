@@ -1,8 +1,8 @@
+import { SimpleMovieResponse } from "@/components/movies";
+import { BackButton } from "@/components/movies/components/BackButton";
+import BanerBagroundMovie from "@/components/movies/components/BanerBagroundMovie";
 import httpClient from "@/graphql/config";
 import { MovieQuery } from "@/graphql/querys/MovieQuery";
-import { SimpleMovieResponse } from "@/movies";
-import BackButton from "@/movies/components/BackButton";
-import BanerBagroundMovie from "@/movies/components/BanerBagroundMovie";
 import { Metadata } from "next";
 import Image from "next/image";
 import { IoPlayOutline } from "react-icons/io5";
@@ -23,8 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   } catch (error) {
     return {
       title: "Movie",
-      description:
-        "Description movie",
+      description: "Description movie",
     };
   }
 }

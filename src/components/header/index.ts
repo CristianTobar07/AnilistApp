@@ -1,0 +1,9 @@
+export { Auth } from "./components/Auth";
+export { FormLogin } from "./components/FormLogin";
+export { FormRegister } from "./components/FormRegister";
+export { Header } from "./components/Header";
+export { HeaderMoviesFavorites } from "./components/HeaderMoviesFavorites";
+export { InfoUser } from "./components/InfoUser";
+export { ModalAuth } from "./components/ModalAuth";
+export { SearchMovies } from "./components/SearchMovies";
+export { SearchMoviesFavorites } from "./components/SearchMoviesFavorites";

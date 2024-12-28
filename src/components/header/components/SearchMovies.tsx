@@ -20,8 +20,10 @@ export const SearchMovies = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/dashboard/movies/1?title=${formValues.movieToSearch}`);
-    console.log({ formValues });
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set("title", formValues.movieToSearch);
+    const newPathname = `/dashboard/movies/1`;
+    router.push(`${newPathname}?${searchParams.toString()}`);
   };
 
   return (

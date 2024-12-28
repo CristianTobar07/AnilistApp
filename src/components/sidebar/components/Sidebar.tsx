@@ -5,9 +5,11 @@ import {
   IoLogoReact,
   IoVideocamOutline,
 } from "react-icons/io5";
-import { SidebarMenuItem } from "./SidebarMenuItem";
+
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
+import { FilterByCategories } from "./FilterByCategories";
+import { SidebarMenuItem } from "./SidebarMenuItem";
 
 const menuItems = [
   {
@@ -53,10 +55,7 @@ export const Sidebar = () => {
         </small>
       </div>
 
-      <div id="profile" className="px-6 py-10">
-        <p className="text-slate-500">Welcome,</p>
-        <a href="#" className="inline-flex space-x-2 items-center"></a>
-      </div>
+      <FilterByCategories />
 
       <div id="nav" className="w-full px-6">
         {menuItems.map((item) => (

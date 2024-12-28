@@ -1,5 +1,5 @@
-import { HeaderMoviesFavorites } from "@/components/header/HeaderMoviesFavorites";
-import { FavoritePokemons } from "@/movies";
+import { HeaderMoviesFavorites } from "@/components/header";
+import { FavoritePokemons } from "@/components/movies";
 
 export const metadata = {
   title: "Favoritos",
