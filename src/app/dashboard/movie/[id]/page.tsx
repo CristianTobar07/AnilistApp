@@ -64,7 +64,11 @@ export default async function MoviesPage({ params }: Props) {
         <BanerBagroundMovie color={coverImage.color} />
       )}
 
-      <div className="relative w-full h-auto px-4 -mt-20 lg:-mt-14 md:-mt-14 sm:-mt">
+      <div
+        className={`relative w-full h-auto px-4 ${
+          bannerImage ? "-mt-20 lg:-mt-14 md:-mt-14 sm:-mt" : "-mt-0"
+        } `}
+      >
         <BackButton />
 
         <div className="relative">

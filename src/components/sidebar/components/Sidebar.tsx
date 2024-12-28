@@ -75,7 +75,7 @@ export const Sidebar: React.FC = () => {
       <aside
         ref={sidebarRef}
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-80 h-screen transition-transform md:relative lg:relative ${
+        className={`fixed top-0 left-0 z-40 w-80 h-full transition-transform md:relative lg:relative ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } sm:translate-x-0`}
         aria-label="Sidebar"

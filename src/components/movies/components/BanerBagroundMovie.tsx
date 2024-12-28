@@ -7,9 +7,8 @@ interface BanerBagroundMovieProps {
 export default function BanerBagroundMovie(props: BanerBagroundMovieProps) {
   return (
     <div
-      className="absolute w-full "
+      className="fixed ml-12 w-full max-w-full overflow-x-hidden"
       style={{
-        width: "78%",
         height: "100vh",
         background: `linear-gradient(to right, ${props.color}, #00264d)`,
       }}

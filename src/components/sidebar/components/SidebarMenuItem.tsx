@@ -20,6 +20,7 @@ export const SidebarMenuItem = ({ path, icon, title, subTitle }: Props) => {
             w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150
             ${currentPath === path.slice(0, 17) ? "bg-yellow-700" : ""}
           `}
+      placeholder={path}
     >
       <div>
         <div>{icon}</div>
