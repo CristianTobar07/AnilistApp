@@ -62,7 +62,7 @@ export const Sidebar: React.FC = () => {
   }, []);
 
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <button
         onClick={toggleSidebar}
         aria-controls="default-sidebar"

@@ -52,7 +52,7 @@ export default async function MoviesPage({ params }: Props) {
   } = responseMovie.Page.media[0];
 
   return (
-    <div className="flex flex-col items-center text-slate-800 pb-2 bg-gray-200 h-screen">
+    <div className="flex flex-col items-center text-slate-800 pb-2 bg-gray-200 h-full">
       {bannerImage ? (
         <Image
           src={bannerImage}

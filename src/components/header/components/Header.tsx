@@ -12,7 +12,7 @@ export const Header = () => {
   });
 
   return (
-    <div className="flex flex-wrap gap-3 bg-gray-800 mx-1 py-3 px-2 text-white flex-col-reverse lg:flex-row sm:items-end  lg:justify-between">
+    <div className="flex flex-wrap gap-3 bg-gray-800 mx-1 py-3 mb-1 px-2 text-white flex-col-reverse lg:flex-row sm:items-end  lg:justify-between">
       <SearchMovies />
       {dataUser?.name ? <InfoUser userName={dataUser.name} /> : <Auth />}
     </div>

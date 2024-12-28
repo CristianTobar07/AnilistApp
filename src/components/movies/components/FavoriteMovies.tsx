@@ -10,7 +10,9 @@ export const FavoritePokemons = () => {
   });
 
   return (
-    <>{movies.length === 0 ? <NoFavorites /> : <MovieGrid movies={movies} />}</>
+    <div className="flex flex-col overflow-y-auto h-full pb-2">
+      {movies.length === 0 ? <NoFavorites /> : <MovieGrid movies={movies} />}
+    </div>
   );
 };
 
