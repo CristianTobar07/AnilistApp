@@ -62,7 +62,7 @@ export const Sidebar: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="h-screen">
       <button
         onClick={toggleSidebar}
         aria-controls="default-sidebar"
@@ -98,7 +98,7 @@ export const Sidebar: React.FC = () => {
 
             <FilterByCategories />
 
-            <div className="w-full px-6" onClick={toggleSidebar}>
+            <div className="w-full px-6 pb-4" onClick={toggleSidebar}>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.path} {...item} />
               ))}
