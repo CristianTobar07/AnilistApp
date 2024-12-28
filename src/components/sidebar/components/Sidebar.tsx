@@ -64,12 +64,12 @@ export const Sidebar: React.FC = () => {
   return (
     <div>
       <button
-        onClick={toggleSidebar} // Cambié el botón para usar la función toggle
+        onClick={toggleSidebar}
         aria-controls="default-sidebar"
         type="button"
         className="inline-flex items-center mt-2 mx-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
-        <IoMenuOutline size={25} className="text-gray-900"/>
+        <IoMenuOutline size={25} className="text-gray-900" />
       </button>
 
       <aside
@@ -80,7 +80,7 @@ export const Sidebar: React.FC = () => {
         } sm:translate-x-0`}
         aria-label="Sidebar"
       >
-        <div className="h-full px-2 py-2 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-2 py-2 overflow-y-auto bg-gray-800">
           <ul className="space-y-2 font-medium">
             <div id="logo" className="my-4 px-6">
               <h1 className="flex items-center  text-lg md:text-2xl font-bold text-white">
@@ -98,7 +98,7 @@ export const Sidebar: React.FC = () => {
 
             <FilterByCategories />
 
-            <div className="w-full px-6">
+            <div className="w-full px-6" onClick={toggleSidebar}>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.path} {...item} />
               ))}

@@ -27,7 +27,7 @@ export const FilterByCategories = () => {
   return (
     <div className="my-2 px-5">
       <h1 className="my-2">Categories</h1>
-      <div className="flex flex-wrap font-normal ">
+      <div className="flex flex-wrap font-normal mb-5">
         {moviesCategories.map((category) => (
           <button
             key={category.id}

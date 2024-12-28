@@ -8,7 +8,7 @@ export const metadata = {
 
 export default async function FavoritesPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-2">
       <HeaderMoviesFavorites />
       <FavoritePokemons />
     </div>

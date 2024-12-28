@@ -8,12 +8,10 @@ interface MovieGridProps {
 }
 export const MovieGrid = (props: MovieGridProps) => {
   return (
-    <div>
-      <div className="flex flex-wrap gap-2 items-center justify-start">
-        {props.movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
+    <div className="flex flex-wrap gap-2 items-center justify-center">
+      {props.movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
     </div>
   );
 };

@@ -52,27 +52,19 @@ export default async function MoviesPage({ params }: Props) {
   } = responseMovie.Page.media[0];
 
   return (
-    <div className="flex flex-col items-center text-slate-800">
+    <div className="flex flex-col items-center text-slate-800 mb-2">
       {bannerImage ? (
         <Image
           src={bannerImage}
           height={1000}
           width={1000}
           alt={`Imagen del pokemon ${title.english}`}
-          className="mb-5 w-full"
-          style={{
-            // width: "78%",
-            height: "100%",
-            objectFit: "cover",
-            position: "absolute",
-            filter: "contrast(50%) brightness(50%)",
-          }}
         />
       ) : (
         <BanerBagroundMovie color={coverImage.color} />
       )}
 
-      <div className="relative w-full h-auto px-4">
+      <div className="relative w-full h-auto px-4 -mt-20 lg:-mt-14 md:-mt-14 sm:-mt">
         <BackButton />
 
         <div className="relative">
@@ -84,7 +76,6 @@ export default async function MoviesPage({ params }: Props) {
                   width={180}
                   height={150}
                   alt={`Imagen del pokemon ${title.english}`}
-                  className="mx-2"
                 />
 
                 <button className="flex bg-yellow-400 w-full text-sm mt-1 font-semibold p-2 align-middle items-center gap-2 rounded-s-sm text-center justify-center">
@@ -94,24 +85,24 @@ export default async function MoviesPage({ params }: Props) {
               </div>
             </div>
 
-            <div className="pb-3 text-white max-w-screen-sm text-xl font-bold capitalize ">
+            <div className="pb-3 text-gray-950 max-w-screen-sm text-xl font-bold capitalize ">
               <h1 className="">
                 {`${title.english || title.native} (${endDate.year})`}
               </h1>
-              <div className="w-full justify-between font-thin text-xs">
+              <div className="w-full justify-between font-light text-xs">
                 <span>Duration: </span> <span>{duration}h</span>
               </div>
               <h1 className="text-xl mt-4">OverView</h1>
-              <p className=" text-sm mt-1 font-thin sm:pr-10">{description}</p>
+              <p className=" text-sm mt-1 font-light sm:pr-10">{description}</p>
 
               <div className="flex flex-wrap items-center gap-1 mt-4">
                 <span className="text-sm">Score: </span>
-                <span className="text-sm font-thin">{meanScore}</span>
+                <span className="text-sm font-light">{meanScore}</span>
               </div>
 
               <div className="flex flex-wrap items-center gap-1 mt-1">
                 <span className="text-sm">Season: </span>
-                <span className="text-sm font-thin">{season}</span>
+                <span className="text-sm font-light">{season}</span>
               </div>
 
               <div className="items-center mt-1">

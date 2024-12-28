@@ -16,7 +16,7 @@ export function BackButton() {
 
   return (
     <div
-      className="flex w-full justify-start my-3 text-white"
+      className="flex w-full justify-start my-3 text-white hover:text-yellow-500"
       onClick={handleBack}
     >
       <IoChevronBackOutline size={40} className="anilist_icon_active" />
