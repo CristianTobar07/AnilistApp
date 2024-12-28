@@ -5,7 +5,6 @@ import { store } from "./";
 import { useEffect } from "react";
 import { setFavoriteMovie } from "./favorites/favorites";
 import { setDataUser } from "./auth/authSlice";
-import { Movie } from "@/movies";
 
 interface Props {
   children: React.ReactNode;

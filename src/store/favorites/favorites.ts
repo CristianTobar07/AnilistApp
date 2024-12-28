@@ -1,4 +1,4 @@
-import { Movie } from "@/movies";
+import { Movie } from "@/components/movies";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface favoritesState {
