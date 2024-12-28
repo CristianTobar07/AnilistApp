@@ -22,3 +22,15 @@
 .button_active_modal {
   background-color: #eab308;
 }
+
+@media (max-width: 767px) {
+  .container_modal {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container_modal {
+    width: 80%;
+  }
+}

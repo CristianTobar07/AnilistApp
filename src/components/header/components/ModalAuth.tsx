@@ -23,7 +23,7 @@ export const ModalAuth = () => {
             <IoChevronBackOutline size={30} /> <span>Back</span>
           </button>
 
-          <div className="flex max-w-screen-sm text-white text-sm items-center justify-center">
+          <div className="flex mt-4 max-w-screen-sm text-white text-sm items-center justify-center">
             <div>
               <button
                 className={`py-2 px-4 rounded-sm bg-gray-900  ${

@@ -19,7 +19,7 @@ export const InfoUser = (props: InfoUserProps) => {
   };
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex flex-wrap items-center justify-center gap-3">
       <strong className="uppercase">{props.userName}</strong>
       <Image
         src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx813-TsHyhR3EDd2x.png"

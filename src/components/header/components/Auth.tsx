@@ -13,10 +13,10 @@ export const Auth = () => {
   });
 
   return (
-    <div>
+    <div className="flex flex-wrap items-center justify-center gap-3">
       <button
         onClick={() => dispatch(showModalAuth(true))}
-        className="border border-gray-50 px-4 py-2 rounded-xl text-sm active:opacity-10 hover:bg-yellow-700 hover:border-yellow-700"
+        className="w-full  border border-gray-50 px-4 py-2 rounded-xl text-sm active:opacity-10 hover:bg-yellow-700 hover:border-yellow-700"
       >
         Login
       </button>

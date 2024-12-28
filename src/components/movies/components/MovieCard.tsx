@@ -24,7 +24,7 @@ export const MovieCard = (movieCard: MovieCardProps) => {
   };
 
   return (
-    <div className="mx-auto right-0 mt-2 w-48">
+    <div className="mx-1 right-0 mt-2 w-80 lg:w-48 md:w-48 lg:mx-auto md:mx-auto">
       <div className="flex flex-col bg-gray-800 rounded overflow-hidden">
         <div className="flex flex-col text-center  border-b">
           <Image
