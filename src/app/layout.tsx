@@ -9,6 +9,8 @@ export const metadata = {
   description: "Search movies",
 };
 
+//Add providers in children to can be used with redux
+
 export default function RootLayout({
   children,
 }: {

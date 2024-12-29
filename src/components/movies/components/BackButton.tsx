@@ -8,9 +8,11 @@ export function BackButton() {
 
   const handleBack = () => {
     if (window.history.length > 1) {
-      router.back(); // Retrocede si hay historial
+      // Come back when there is history
+      router.back();
     } else {
-      router.push("/"); // Redirige a la página principal o una predeterminada
+      // Redirect to main page
+      router.push("/");
     }
   };
 

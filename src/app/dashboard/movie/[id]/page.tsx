@@ -13,6 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
+    // Call the function to get movies from the database
     const responseMovie = await getMovie(+params.id);
     const { title } = responseMovie.Page.media[0];
 
